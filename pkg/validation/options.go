@@ -381,6 +381,8 @@ func parseProviderInfo(o *options.Options, msgs []string) []string {
 				p.JWTKey = signKey
 			}
 		}
+	case *providers.G5Provider:
+		p.SetAllowedRoles(o.G5Roles)
 	}
 	return msgs
 }

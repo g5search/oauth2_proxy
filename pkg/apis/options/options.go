@@ -60,6 +60,8 @@ type Options struct {
 	Banner                   string   `flag:"banner" cfg:"banner"`
 	Footer                   string   `flag:"footer" cfg:"footer"`
 
+	G5Roles []string `flag:"g5-roles" cfg:"g5_roles"`
+
 	Cookie  CookieOptions  `cfg:",squash"`
 	Session SessionOptions `cfg:",squash"`
 	Logging Logging        `cfg:",squash"`
@@ -248,6 +250,8 @@ func NewFlagSet() *pflag.FlagSet {
 	flagSet.String("ping-path", "/ping", "the ping endpoint that can be used for basic health checks")
 	flagSet.String("ping-user-agent", "", "special User-Agent that will be used for basic health checks")
 	flagSet.Bool("proxy-websockets", true, "enables WebSocket proxying")
+
+	flagSet.StringSlice("g5-roles", []string{}, "G5 allowed role names (optional)")
 
 	flagSet.String("cookie-name", "_oauth2_proxy", "the name of the cookie that the oauth_proxy creates")
 	flagSet.String("cookie-secret", "", "the seed string for secure cookies (optionally base64 encoded)")
