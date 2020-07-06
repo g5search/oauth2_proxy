@@ -46,6 +46,8 @@ func New(provider string, p *ProviderData) Provider {
 		return NewNextcloudProvider(p)
 	case "digitalocean":
 		return NewDigitalOceanProvider(p)
+	case "g5":
+		return NewG5Provider(p)
 	default:
 		return NewGoogleProvider(p)
 	}

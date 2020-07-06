@@ -1,3 +1,11 @@
+## G5 Fork
+
+This is our fork of the oauth2 proxy. It started as a fork from the original bitly version in 2017. That version is still available in the `2017` branch.
+
+While Github still sees this repository as a fork of the bitly repo, it has been updated from the official version now. Going forward, I will be pushing Docker tags based on the upstream releases. When I fork `v6.0.0` from upstream and add our modifications, I will publish it as `g5search/oauth2_proxy:v6.0.0`.
+
+---
+
 ![OAuth2 Proxy](/docs/logos/OAuth2_Proxy_horizontal.svg)
 
 [![Build Status](https://secure.travis-ci.org/oauth2-proxy/oauth2-proxy.svg?branch=master)](http://travis-ci.org/oauth2-proxy/oauth2-proxy)
